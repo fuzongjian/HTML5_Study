@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload = function(){
+				var span = document.getElementById('title').getElementsByTagName('span')[0];
+				setInterval(function(){
+					var oldnum = span.innerHTML;
+					var newnum = oldnum -1;
+					span.innerHTML = newnum;
+					if(newnum ==1)
+					{
+						location.assign('http://www.baidu.com');
+					}
+				},1000)
+			}
+			
+		</script>
+	</head>
+	<body>
+		<h1 id="title">亲，页面没找到，<span>5</span>秒后跳回百度</h1>
+	</body>
+</html>

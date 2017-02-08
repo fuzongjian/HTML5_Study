@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>数组</title>
+</head>
+<body>
+	<script type="text/javascript">
+	function singleArrayMethod(argument) {
+		var array = new Array();
+		array = [10,20,30];
+		document.write(array + "<br>");
+		document.write("数组长度" + array.length);
+	}
+	function doubleArrayMethod(argument) {
+		// 二维数组
+		var doubleArray = new Array();//先声明一维
+		for(var i = 0;i < 5; i ++){
+			doubleArray[i] = new Array();//再声明二维
+			for(var j = 0; j < 4; j ++){
+				doubleArray[i][j] = i +j;
+			}
+		}
+		for (var i = 0; i < 5; i++) {
+			for(var j = 0;j < 4;j ++){
+				document.write(doubleArray[i][j] + "<br>");
+			}
+		}
+		// document.write(doubleArray + "<br>");
+		// document.write(doubleArray.length);
+
+		var myArray = [[1,2,1],[7,8,9]];
+		document.write(myArray);
+	}
+
+	doubleArrayMethod();
+	</script>
+</body>
+</html>

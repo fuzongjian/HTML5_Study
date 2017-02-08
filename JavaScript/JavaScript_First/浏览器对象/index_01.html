@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>浏览器对象</title>
+	<style type="text/css">
+		.one{
+			display: block;
+		}
+		.two{
+			display: block;
+			width: 200px;
+			text-align: center;
+			font: 100;
+		}
+		.three{
+			width: 100px;
+			text-align: center;
+		}
+		.four{
+			width: 100px;
+			text-align: center;
+		}
+	</style>
+	<script type="text/javascript">
+		function windowOpen(argument) {
+			window.open('http://www.baidu.com', '_blank','height = 600,width=400,top=100,toolbar=no,left = 0,menubar=0,scrollbars=no,status= no')
+		}
+
+		// 时间显示
+		var timer ;
+		function startTime(argument) {
+			//setInterval("clockMethod()",1000);
+			timer =	setInterval(clockMethod,1000);
+		}
+		function stopTimer(argument) {
+			clearInterval(timer);
+		}
+		function clockMethod(argument) {
+			var mydate = new Date();
+			var timestr = mydate.getHours()+":"+mydate.getMinutes()+":"+mydate.getSeconds();
+			document.getElementById("time").value = timestr;
+		}
+
+		
+	</script>
+</head>
+<body>
+	<input type="button" name="button" value="点击我，打开新窗口" onclick="windowOpen()" class="one">
+	<input type="text" name="text" id="time" class="two">
+	<input type="button" name="button" value="开启计时器" onclick="startTime()" class="three">
+	<input type="button" name="button" value="关闭计时器" onclick="stopTimer()" class="four">
+</body>
+</html>

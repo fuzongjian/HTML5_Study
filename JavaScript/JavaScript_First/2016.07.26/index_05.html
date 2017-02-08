@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>none_blcok</title>
+	<style type="text/css">
+		
+	</style>
+	<script type="text/javascript">
+		function displayMethod(argument) {
+			console.log("displayMethod---good good study");
+			var object = document.getElementById('con').style.display = display;
+			// object.display = none;
+		}
+		function hidenMethod(argument) {
+			console.log("hidenMethod good study");
+			var object = document.getElementById('con').style.display = none;
+			// object.display = blcok;
+		}
+	</script>
+</head>
+<body>
+	<h1>JavaScript</h1>
+	<p id="con">求知若渴，虚怀若谷。</p>
+	<form>
+		<input type="button" name="button" value="display" onclick="displayMethod()">
+		<input type="button" name="button" value="hiden" onclick="hidenMethod()">
+	</form>
+</body>
+</html>

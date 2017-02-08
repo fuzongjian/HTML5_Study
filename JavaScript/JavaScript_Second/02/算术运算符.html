@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		// 1、算术运算符
+		// 2、关系运算符（比较运算符）
+		// 3、赋值运算符
+		// 4、逻辑运算符
+		// 5、三元运算符
+		function first_method(){
+			// 注意：js的运算能力一般，一般不用来进行精准的运算
+			var sum = 12 + '5';
+			var sum = 4.8 - 1.2;
+			var sum = 9 % 2;// 取余
+			document.write(sum);
+		}
+//		first_method();
+		function second_method(){
+			var x = 5;
+			var y = '5';
+			// == 只判断内容，不判断类型
+			// === 既判断类型又判断内容
+			// != 不等于，只判断内容，不判断类型
+			// !== 全不等于，既判断内容，又判断类型
+			if(x == y){
+				document.write("YES");
+			}else{
+				document.write("NO");
+			}
+			
+			if(x === y){
+				document.write("YES");
+			}else{
+				document.write("NO");
+			}
+		}
+//		second_method()
+		function third_method(){
+			var age = 22;
+			var re = (age >= 18)?'成年':'未成年';
+			document.write(re);
+		}
+//		third_method();
+	</script>
+	<body>
+	</body>
+</html>

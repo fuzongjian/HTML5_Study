@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>函数调用</title>
+	<script type="text/javascript">
+		function testMethod(argument) {
+			alert("好好学习，天天向上。");
+		}
+		function sumMethod(x,y,z) {
+			sum = x + y + z;
+			document.write(sum);
+		}
+		function returnMethod(x,y,z) {
+			return x+y+z;
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<input type="button" name="clickme" onclick="document.write(returnMethod(1,8,9))">
+	</form>
+</body>
+</html>

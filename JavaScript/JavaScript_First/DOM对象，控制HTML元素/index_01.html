@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>getElementById/getElementsByName/getElementByTagName</title>
+	<script type="text/javascript">
+		// ID 是一个人的身份证号码，是唯一的。所以通过getElementById获取的是指定的一个人
+		// Name 是他的名字，可以重复。所以通过getElementsByName获取名字相同的人集合
+	   //  TagName可以看似某类，获取相同类的人集合
+	   function allButtonClick(argument) {
+	   		var hobbyArray = document.getElementsByTagName("input");
+	   		for (var i = 0; i < hobbyArray.length; i++) {
+	   			if (hobbyArray[i].type == "checkbox") {
+	   				hobbyArray[i].checked = true;
+	   			}
+	   		}
+	   }
+	   function nonoButtonClick(argument) {
+	   		var hobby = document.getElementsByName("hobby");
+	   		for (var i = 0; i < hobby.length; i++) {
+	   			hobby[i].checked = false;
+	   		}
+	   }
+	   function oneButtonClick(argument) {
+	   		var value = parseInt(document.getElementById("text").value);
+	   		switch (value){
+	   			case 1:
+	   				document.getElementById("hobby1").checked = true;
+	   				break;
+	   			case 2:
+	   				document.getElementById("hobby2").checked = true;
+	   				break;
+	   			case 3:
+	   				document.getElementById("hobby3").checked = true;
+	   				break;
+	   			case 4:
+	   				document.getElementById("hobby4").checked = true;
+	   				break;
+   				case 5:
+   					document.getElementById("hobby5").checked = true;
+   					break;
+	   			default :
+	   			break;
+	   		}
+	   }
+	</script>
+</head>
+<body>
+	请选择你的爱好:<br>
+	<input type="checkbox" name="hobby" id="hobby1">音乐
+	<input type="checkbox" name="hobby" id="hobby2">登山
+	<input type="checkbox" name="hobby" id="hobby3">游泳
+	<input type="checkbox" name="hobby" id="hobby4">阅读
+	<input type="checkbox" name="hobby" id="hobby5">打球
+	<input type="checkbox" name="hobby" id="hobby1">跑步<br>
+	<input type="button" name="button" value="全选" onclick="allButtonClick()">
+	<input type="button" name="button" value="全不选" onclick="nonoButtonClick()"><br>
+	<p>请输入数字1-6</p>
+	<input type="text" name="text" id="text">
+	<input type="button" name="button" value="确定" onclick="oneButtonClick()">
+</body>
+</html>

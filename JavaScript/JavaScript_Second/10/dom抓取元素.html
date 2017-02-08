@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>求知若渴，虚怀若谷。</title>
+		<script type="text/javascript">
+		window.onload = function(){
+			// getElementById返回只有一个
+			document.getElementById('one').style.color = 'red';
+			// Class、Name、标签名 返回的是数组
+//			var arr = document.getElementsByClassName('ls');
+//			var arr = document.getElementsByName('hd');
+			var arr = document.getElementsByTagName('p');
+			arr[0].style.color = 'blue';
+//			document.getElementById('box').getElementsByClassName('hd')
+			
+		}
+
+		</script>
+	</head>
+	<body>
+		<p>求知若渴，虚怀若谷。---0</p>
+		<p id="one">求知若渴，虚怀若谷。---1</p>
+		<p>求知若渴，虚怀若谷。---2</p>
+		<p class="ls">求知若渴，虚怀若谷。---3</p>
+		<p>求知若渴，虚怀若谷。---4</p>
+		<p class="ls">求知若渴，虚怀若谷。---5</p>
+		<p name="hd">求知若渴，虚怀若谷。---6</p>
+		<p class="ls">求知若渴，虚怀若谷。---7</p>
+	</body>
+</html>

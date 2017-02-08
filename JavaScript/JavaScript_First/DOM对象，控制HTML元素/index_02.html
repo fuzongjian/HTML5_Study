@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>get/setAttribute()方法</title>
+	<script type="text/javascript">
+	// setAttribute()方法增加一个指定名称和值得属性，或把一个现有的属性设定为指定的值
+	// getAttribute()方法通过元素节点的属性名称获取属性的值
+		function getAttributeMethod() {
+			var array = document.getElementsByTagName("li");
+			for (var i = 0; i < array.length; i++) {
+					var text = array[i].getAttribute("title");
+					if (text != "" && text != null) {
+						console.log(text);
+					}else{
+						array[i].setAttribute("title","good");
+						console.log(array[i].getAttribute("title"));
+					}
+
+			}	
+		}
+	</script>
+</head>
+<body>
+	<p>课程列表</p>
+	<ul>
+		<li title="第一个li">HTML</li>
+		<li title="第二个li">JavaScript</li>
+		<li title="">jQuery</li>
+		<li id="第四个li">HTML5</li>
+	</ul>
+	<input type="button" name="button" value="节点属性" onclick="getAttributeMethod()">
+</body>
+</html>

@@ -1,0 +1,1 @@
+document.wirte("引用JS文件");

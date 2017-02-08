@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>open()方法</title>
+	<script type="text/javascript">
+		function testMethod(argument) {
+			// 格式 window.open([URL],[窗口名称],[参数字符串])
+			// 窗口名称：_blank：在新的窗口显示目标网页  _self：在当前窗口显示目标网页 _top：框架网页中在上部窗口显示目标网页
+			var closeWindow = window.open('http://www.baidu.com','_top','width = 600 height = 400 top = 100 left = 0');
+			closeWindow.close();
+		}
+	</script>
+</head>
+<body>
+	<input type="button" name="button" onclick="testMethod()" value="click me">
+</body>
+</html>

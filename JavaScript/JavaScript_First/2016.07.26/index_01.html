@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>index_01</title>
+	<!-- confirm函数选择框，选择YES/NO -->
+	<script type="text/javascript">
+	function testMethod(argument) {
+		var message = confirm("今天你学习了吗？");
+		if (message == true) {
+			document.write("正在学习");
+		}else{
+			document.write("心情不好");
+		}
+	}	
+	</script>
+</head>
+<body>
+	<input type="button" name="" onclick="testMethod()" value="click me">
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	function first (){
+		// 用隐性方式创建数组
+		// 对象：很多属性（变量）和方法（函数）的集合体
+		// 数组里的单个元素可以为任意类型的数据
+		
+		var fruits = new Array('苹果',2,false,'栗子','西瓜');//构造函数
+		var fruits = ['苹果',2,false,'栗子','西瓜'];
+//		document.write(fruits[2]);
+//		document.write(fruits.length);
+		document.write(fruits);
+		//数据的替换
+		document.write(" <br />数据替换---");
+		fruits[0] = '鸭梨';
+		document.write(fruits);
+		fruits[5] = '香蕉';
+		document.write(" <br />新增元素---");
+		document.write(fruits);
+	}
+//	first();// 一维数组
+	
+	function second (){
+		var tourists = [['狼牙山','白洋淀','北戴河'],['黄山','天柱山'],['少林寺','白马市']];
+		document.write(tourists);
+		
+	}
+//	second();
+ 
+ 	// 数组对象
+ 	function third (){
+ 		var fruits = ['苹果',2,false,'栗子','西瓜'];
+ 		// 向数组末尾追加元素
+ 		fruits.push('香蕉');
+ 		document.write(fruits + "<br />");
+ 		// 向数组开头追加元素
+ 		fruits.unshift('fuzongjian');
+ 		document.write(fruits + "<br />");
+ 		// 删除第一个元素
+ 		fruits.shift();
+ 		document.write(fruits + "<br />");
+ 		// 删除最后一个元素
+ 		fruits.pop();
+ 		document.write(fruits + "<br />");
+ 	}
+// 	third();
+	function firth (){// 原数组操作
+		var fruits = ['苹果',2,false,'栗子','西瓜'];	
+		document.write(fruits + "<br />");
+ 		fruits.splice(1,2);//从1号开始删除，删除两个
+ 		document.write(fruits + "<br />");
+ 		
+ 		var fruits = ['苹果',2,false,'栗子','西瓜'];	
+ 		fruits.splice(1,2,'鸭梨','苹果');//
+ 		document.write(fruits + "<br />");
+ 		fruits.splice(1,0,'水蜜桃');
+ 		document.write(fruits + "<br />");
+	}
+//	firth();
+	function fifth (){// 截取，不会改变原数组，之后返回新的结果
+		var fruits = ['苹果',2,false,'栗子','西瓜'];	
+		// slice 在截取的时候，只包含开始，不包含结束
+		document.write(fruits.slice(1,2) + "<br />");
+		document.write(fruits.slice(1,-1) + "<br />");
+		document.write(fruits.splice(1) + "<br />");
+	}
+//	fifth();
+	function sixth (){// 
+		var fruits = ['苹果',2,false,'栗子','西瓜'];
+		//将数组转换为字符串
+		document.write(fruits.join('+') + "<br />");
+	
+		// 数组的连接
+		var people = ['张三','李四'];
+		document.write(fruits.concat(people) + "<br />");
+	}
+	sixth();
+	</script>
+	<body>
+	</body>
+</html>

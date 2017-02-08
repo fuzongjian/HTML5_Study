@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		// 1、Number（）      转换成数值类型
+		// 2、parseInt（）    将字符串转换成整型
+		// 3、parseFloat（）  转换成小数
+		// 4、isNaN（）       判断一个数能否转换成数值类型
+		// 5、eval（）		 用javascript语法来解析字符串内容
+		
+		
+		
+		// Number()
+		// A、如果是布尔值，false为0，true为1
+		// B、如果是数字，转换成本身。将无意义的后导0去掉
+		// C、如果是undefined转换成NaN not a number
+		// D、如果是字符串，
+		// 1、如果字符串当中只有数字，转换为10进制
+		// 2、如果是有效的规范的浮点型，转换为浮点值
+		// 3、如果是空字符串，则转换为0
+		// 4、如果是其他的值，返回NaN
+		function first (){
+			var state = false;
+			var state = 2.9;
+			var state = '9.8';
+			var state = '';
+			var state = 'fuzongjian';
+			document.write(Number(state));
+			document.write('<br />');
+			document.write(typeof Number(state));
+		}
+//		first();
+		// parseInt()
+		// 1、如果一个字符串只包含数字，则以10进制的方式转换为整型
+		// 2、它会自动忽略字符串前面的空格，直到找到第一个非空的数值字符串，如果字符串的第一个字符不是空格，数字
+		function second (){
+			var test = '5.666';
+			var test = '200px';
+			var test = 'hd200px';
+			document.write(parseInt(test));
+			document.write('<br />');
+			document.write(typeof parseInt(test));
+		}
+//		second ();
+		function third (){
+			var num = '2.99';
+			var num = '2;'
+			document.write(parseFloat(num));
+			
+		}
+//		third();
+		function forth (){
+			var num = '39';
+			// 如果传入的数据不能被转成数字，那么返回的是true
+			document.write(isNaN(num));
+		}
+//		forth();
+		function fifth(){
+			var str = '1+1';
+			document.write(str);
+			document.write('<br />');
+			document.write(eval(str));
+		}
+		fifth();
+	</script>
+	<body>
+	</body>
+</html>

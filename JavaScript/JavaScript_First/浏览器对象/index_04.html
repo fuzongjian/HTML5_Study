@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Navigator对象</title>
+	<script type="text/javascript">
+		function informationMethod(argument) {
+			// 浏览器名称
+			var browser = navigator.appName;
+			// 浏览器的平台和版本信息
+			var version = navigator.appVersion;
+			//运行浏览器的操作系统平台
+			var platform = navigator.platform;
+			//客户机发送服务器的user-agent头部的值
+			var agent = navigator.userAgent;
+			console.log(browser);
+			console.log(version);
+			console.log(platform);
+			console.log(agent);
+		}
+		function judgeMethod() {
+			var agent = navigator.userAgent;
+			var name = "";
+			if (agent.indexOf("Firefox")>-1) {
+				name = "Firefox";
+			}else if (agent.indexOf("Chrome")) {
+				name = "Chrome";
+			}else if (agent.indexOf("MSIE")>-1&&agent.indexOf("Trident")>-1) {
+				name = "IE(8-10)";
+			}
+			console.log(agent);
+			console.log("浏览器名字:"+name);
+		}
+		
+	</script>
+</head>
+<body>
+	<input type="button" name="button" onclick="informationMethod()" value="Navigator对象信息">
+	<input type="button" name="button" onclick="judgeMethod()" value="浏览器信息">
+</body>
+</html>

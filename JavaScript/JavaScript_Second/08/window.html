@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function first_method(){
+				var re = confirm('确定删除？');
+				if (re) {
+					document.write("删除成功");
+				}else{
+					document.write("操作取消");
+				}
+			}
+//			first_method();
+			function second_method (){
+				setTimeout(function(){
+				// 跳转  以下三种效果一样
+				location.replace('http://www.baidu.com');// 不能回退
+				location.assign('http://www.baidu.com');// 会留下历史记录，可以回退
+				location.href = 'http://www.baidu.com';
+				},3000);
+				
+			}
+//			second_method();
+			function third_method(){// 界面刷新
+				document.write(Math.random());
+				setTimeout(function(){
+					location.reload();
+				},1000)
+			}
+			third_method();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

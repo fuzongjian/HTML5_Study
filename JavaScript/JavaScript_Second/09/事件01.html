@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#hd{
+				width: 500px;
+				height: 500px;
+				background: purple;
+				margin: 0 auto;
+			}
+		</style>
+		<script type="text/javascript">
+		window.onload = function(){// 需要在界面加载完成之后，执行
+		// 判断浏览器
+		if(document.all){
+			alert('低版本ie');
+		}else{
+			alert('w3c规范浏览器');
+		}
+			
+			
+			
+			
+			
+			
+			document.getElementById("hd").onclick = function(){
+				alert('onclick');
+			};
+			document.getElementById("hd").ondblclick = function(){
+				alert('ondblclick');
+			}
+			document.getElementById("hd").onmouseover = function(){
+				alert('onmouseover');
+			}
+			// onmousemove 鼠标移动事件，在内部移动也触发
+			// onmouseover 鼠标移入事件
+			// onmouseout  鼠标离开时的事件
+			
+			// 事件监听
+			//注意：addEventListener是w3c的标准方法，不支持ie低版本
+			//第一个参数事件名称不要加on，
+			//注意： 低版本ie并不能触发
+			document.getElementById("hd").addEventListener('click',function(){
+				alert('事件监听，事件不会被覆盖')
+			})
+			document.getElementById("hd").attachEvent('onclick',function(){
+				alert('低版本ie才能触发');
+			})
+			
+
+		}
+		
+		
+	</script>
+	</head>
+	<body>
+		<div id="hd">
+		</div>
+		<div id="test" onclick="method()">
+			
+		</div>
+	</body>
+</html>

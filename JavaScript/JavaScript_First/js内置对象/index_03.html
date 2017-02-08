@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Math对象</title>
+	<script type="text/javascript">
+		function ceilMethod(argument) {
+			console.log("0.8向上取整为"+Math.ceil(0.8));
+			console.log("6.3向上取整为"+Math.ceil(6.3));
+			console.log("5向上取整为"+Math.ceil(5));
+			console.log("-5.1向上取整为"+Math.ceil(-5.1));
+			console.log("-5.9向上取整为"+Math.ceil(-5.9));
+		}
+		function floorMethod(argument) {
+			console.log("0.8向下取整为"+Math.floor(0.8));
+			console.log("6.3向下取整为"+Math.floor(6.3));
+			console.log("5向下取整为"+Math.floor(5));
+			console.log("-5.1向下取整为"+Math.floor(-5.1));
+			console.log("-5.9向下取整为"+Math.floor(-5.9));
+		}
+		function roundMethod(argument) {
+			console.log("0.8四舍五入为"+Math.round(0.8));
+			console.log("6.3四舍五入为"+Math.round(6.3));
+			console.log("5四舍五入为"+Math.round(5));
+			console.log("-5.1四舍五入为"+Math.round(-5.1));
+			console.log("-5.9四舍五入为"+Math.round(-5.9));
+		}
+		function randomMethod(argument) {
+			console.log("(0,100)以内的随机数"+Math.random()*100);
+			console.log("(0,1)以内的随机数"+Math.random());
+		}
+	</script>
+</head>
+<body>
+	<input type="button" name="button" value="向上取整" onclick="ceilMethod()">
+	<input type="button" name="button" value="向下取整" onclick="floorMethod()">
+	<input type="button" name="button" value="四舍五入" onclick="roundMethod()">
+	<input type="button" name="button" value="随机数" onclick="randomMethod()">
+</body>
+</html>

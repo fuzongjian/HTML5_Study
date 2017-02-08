@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>数组对象</title>
+	<script type="text/javascript">
+		function concatMethod(argument) {
+			var arrOne = new Array("No pain");
+			var arrTwo = new Array("No gain")
+			console.log(arrOne.concat(arrTwo));
+		}
+		// 数组元素连接成一个字符串 返回一个字符串
+		function joinMethod(argument) {
+			var arrOne = new Array("No pain");
+			var arrTwo = new Array("No gain")
+			var arrThree = arrOne.concat(arrTwo);
+			console.log(arrThree);
+			console.log(arrThree.join("---"));
+		}
+		// 数组逆序
+		function reverseMethod(argument) {
+			var nor = new Array("1","2","3");
+			console.log(nor);
+			console.log(nor.reverse());
+		}
+		// 截取数组返回一个新的数组
+		function sliceMethod(argument) {
+			var array = new Array(1,2,3,4,5,6);
+			console.log("原数组---"+array);
+			console.log("(4)以后元素组成的数组---"+array.slice(4));
+			console.log("(2,5)中间元素组成的数组---"+array.slice(2,5));
+			
+		}
+
+		// 数组排序
+		function sortNum(a,b) {
+			return a - b;//升序，降序
+		}
+		function sortMethod(argument) {
+			var array = new Array("80","6","100","16");
+			console.log("原数组"+array);
+			console.log("升序"+array.sort(sortNum))
+		}
+	</script>
+</head>
+<body>
+	<input type="button" name="button" value="数组连接" onclick="concatMethod()">
+	<input type="button" name="button" value="(---)指定分割符连接数组元素" onclick="joinMethod()">
+	<input type="button" name="button" value="数组逆序" onclick="reverseMethod()">
+	<input type="button" name="button" value="选定元素" onclick="sliceMethod()">
+	<input type="button" name="button" value="数组排序" onclick="sortMethod()">
+</body>
+</html>

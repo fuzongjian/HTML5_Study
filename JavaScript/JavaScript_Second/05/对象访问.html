@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		function first (){
+			// 使用原生形式创建对象，
+			var iphone = {color:'土豪金',
+						  price:'8000元',
+						  size:'5.7寸',
+						  chat:function(){alert("good")}
+						  };
+			document.write(iphone.color);
+			document.write("<br />");
+			document.write(iphone['color']);
+			document.write("<br />");
+			iphone.chat();
+			for(x in iphone){// x代表属性名
+				document.write( x + '=' + iphone[x]);
+			}
+		}
+//		first();
+		// 销毁
+		function second (){
+			var iphone = {color:'土豪金',
+						  price:'8000元',
+						  size:'5.7寸',
+						  chat:function(){alert("good")}
+						  };
+			document.write(iphone.color);
+			delete iphone.color;//删除对象的方法或属性
+			document.write(iphone.color);
+			// 销毁对象
+			document.write(iphone.size);
+			iphone = null;
+			document.write(iphone.size);
+		}
+		second();
+	</script>
+	<body>
+	</body>
+</html>

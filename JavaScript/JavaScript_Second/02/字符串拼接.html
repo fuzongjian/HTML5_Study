@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		function first (){
+			var input_string = prompt('请输入您的名字：');
+			var input_password = prompt('请输入您的密码：');
+			document.write('欢迎'+ input_string,',您的密码是'+input_password);
+		}
+		function second (){
+			var str = 'fuzongjian非常好';
+			//注：一个汉字也算一个字符
+			document.write(str.length + '<br />');
+			// 去到某个字符
+			document.write(str.charAt(3) + '<br />');
+			// 返回指定位置unicode编码
+			document.write(str.charCodeAt(3) + '<br />');
+			// 将Unicode编码转成原始字符
+			document.write(String.fromCharCode(100) + '<br />');
+			// 获取字符串第一次出现的位置
+			document.write(str.indexOf('n')+ '<br />');
+			// 最后一次出现的位置
+			document.write(str.lastIndexOf('n')+ '<br />');
+			// 搜索有没有该字符串
+			document.write(str.match('q')+ '<br />');
+			// 替换(默认第一个找到的内容)
+			document.write(str.replace('n','*')+ '<br />');
+			
+		}
+//		second();
+	function third (){// 截取
+		var str = 'fuzongjian';
+		// 从第一个开始，截取第2个
+		document.write(str.slice(1,3)+ '<br />');
+		// 从第一个开始，截取三个字符
+		document.write(str.substr(1,3)+ '<br />');
+		// 字符串分割成数组
+		document.write(str.split('')+ '<br />');
+		// 大小写转换
+		document.write(str.toUpperCase()+ '<br />');
+		document.write(str.toLowerCase()+ '<br />');
+	}
+	third();
+	</script>
+	<body>
+	</body>
+</html>

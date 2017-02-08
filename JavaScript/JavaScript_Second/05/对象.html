@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		function first (){
+			// 使用原生形式创建对象，
+			var iphone = {color:'土豪金',
+						  price:'8000元',
+						  size:'5.7寸',
+						  chat:function(){alert("good")}
+						  };
+			document.write(iphone.color);
+			document.write(iphone.chat());
+		}
+//		first();
+		// 构造函数
+		function second (){
+			function obj (){
+			this.size = '5.5寸';
+			this.color = '土豪金';
+			this.chat = function (){
+				alert('good');
+			}
+		}
+			var iphone = new obj();
+			document.write(iphone.size);
+			// 新增属性
+			iphone.widget = '100克';
+			iphone.newmethod = function (){
+			alert("new method");
+			}
+			document.write(iphone.widget);
+		}
+		second();
+	</script>
+	<body>
+	</body>
+</html>

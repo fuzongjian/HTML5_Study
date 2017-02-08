@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>访问子节点childNodes</title>
+	<style type="text/css">
+		.box{
+			width: 400px;
+			height: 300px;
+			border: 1px solid #eee;
+		}
+		.box1{
+			width: 400px;
+			height: 100px;
+			border: 1px solid #eee;
+		}
+	</style>
+	<script type="text/javascript">
+		
+		function startMethod(argument) {
+			var array = document.getElementsByTagName("div")[0].childNodes;
+			for (var i = 0; i < array.length; i++) {
+				console.log("节点类型"+array[i].nodeType+"---子节点个数"+array.length);
+			}
+		}
+		function firstChildMethod() {
+			var array = document.getElementsByTagName("div")[0];
+			console.log("子节点的第一项"+array.firstChild.nodeName);
+		}
+		function lastChildMethod(argument) {
+			var array = document.getElementsByTagName("div")[0];
+			console.log("子节点的最后一项"+array.lastChild.nodeName);
+		}
+		//父节点
+		function parentMethod(argument) {
+			console.log(document.getElementById("python").parentNode);
+		}
+		// 祖父节点
+		function parentparentMethod(argument) {
+			console.log(document.getElementById("java").parentNode.parentNode);
+		}
+		function leftMethod(argument) {
+			var python = document.getElementById("python");
+			var obj = python.previousSibling;
+			if (obj && obj.nodeType != 1) {
+				obj = obj.previousSibling;
+				console.log(obj.nodeName);
+			}else{
+				console.log("这是第一个节点");
+			}
+		}
+		function rightMethod(argument) {
+			var python = document.getElementById("python");
+			var obj = python.nextSibling;
+			if (obj && obj.nodeType != 1) {
+				obj = obj.nextSibling;
+				console.log(obj.nodeName);
+			}else{
+				console.log("这是最后一个节点");
+			}
+		}
+		//在指定节点的最后一个子节点列表之后添加一个新的子节点
+		function addMethod(argument) {
+			var obj = document.getElementById("div");
+			var newObj = document.createElement("p");
+			newObj.innerHTML = "这是个新的节点p"
+			obj.appendChild(newObj);
+		}
+		function insertMethod(argument) {
+			var obj = document.getElementById("div");
+			var node = document.getElementById("python");
+			var newnode = document.createElement("p");
+			newnode.innerHTML = "插入的新的节点";
+			obj.insertBefore(newnode,node);
+		}
+
+		function removeMethod(argument) {
+			var obj = document.getElementById("div");
+			//这种删除方式会先删除空节点，然后再删其他节点，需要点击两次
+			// 可以删除指定的节点，比如得到python节点，然后直接删除
+			obj.removeChild(obj.childNodes[0]);
+		}
+		function changeMethod(argument) {
+			var newnode = document.createElement("p");
+			var newnodeText = document.createTextNode("javascript");
+			newnode.appendChild(newnodeText);
+			var oldnode = document.getElementById("change");
+			oldnode.parentNode.replaceChild(newnode,oldnode);
+		}
+	</script>
+</head>
+<body>
+	<div class="box" id="div">
+		<p>javascript</p>
+		<h2 id="python">python</h2>
+		<div>
+			<h2 id="java">java</h2>
+		</div>
+		<h5>PHP</h5>
+	</div>
+	<div class="box1">
+		<p id="change">Java</p>
+		<a href="javascript:changeMethod()">Java换成JavaScript</a>
+	</div>
+	<input type="button" name="button" onclick="startMethod()" value="访问子节点">
+	<input type="button" name="button" onclick="firstChildMethod()" value="子节点的第一项">
+	<input type="button" name="button" onclick="lastChildMethod()" value="子节点的最后一项">
+	<input type="button" name="button" onclick="parentMethod()" value="python的父节点">
+	<input type="button" name="button" onclick="parentparentMethod()" value="java的祖父节点"><br>
+	<input type="button" name="button" onclick="leftMethod()" value="python的左兄弟节点">
+	<input type="button" name="button" onclick="rightMethod()" value="python的右兄弟节点">
+	<input type="button" name="button" onclick="addMethod()" value="添加新的节点">
+	<input type="button" name="button" onclick="insertMethod()" value="python前加一个新的节点"><br>
+	<input type="button" name="button" onclick="removeMethod()" value="删除节点">
+</body>
+</html>

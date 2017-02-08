@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>节点属性</title>
+	<script type="text/javascript">
+		function getMethod(argument) {
+			var array = document.getElementsByTagName("li");
+			for (var i = 0; i < array.length; i++) {
+				console.log(array[i].nodeName);
+				console.log(array[i].nodeValue);
+				console.log(array[i].nodeType);
+			}
+		}
+	</script>
+</head>
+<body>
+	<ul>
+		<li>JavaScript</li>
+		<li>HTML/CSS</li>
+		<li>jQuery</li>
+	</ul>
+	<input type="button" name="button" value="节点属性" onclick="getMethod()">
+</body>
+</html>

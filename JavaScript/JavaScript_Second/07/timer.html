@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	function first (){
+		var num = 0;
+		function first_timer (){
+//			document.write(num);
+			num ++;
+			console.log(num);
+		}
+//		setInterval(first_timer,1000);// 每个两秒执行一次
+		setTimeout(first_timer,1000);// 一秒后执行
+	}
+	function second (){
+		setInterval(function(){
+			console.log('fuzongjian');
+		},1000);
+	}
+//	second();
+	function third (){// 停止定时器
+		var timer = setInterval(function(){
+			console.log("fuzongjian");
+		},1000);
+		setTimeout(function(){
+			clearInterval(timer);
+		},5000);
+	}
+	third();
+	</script>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.hd{
+				background-color: purple;
+				color: white;
+			}
+		</style>
+	</head>
+	<script type="text/javascript">
+		var row = prompt('请输入行数:');
+		var cow = prompt('请输入列数:');
+		document.write("<table border='1'>");
+		for (var i = 1; i <= row; i ++) {
+			// 判断奇偶行
+			if(i%2){
+				document.write("<tr class='hd'>");
+			}else{
+				document.write("<tr>");
+			}
+			
+			for (var j = 1; j <= cow; j ++) {
+				document.write("<td>" + i + "行" + j + "列</td>")
+			}
+			document.write("</tr>");
+		}
+		document.write("</table>");
+	</script>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>日期对象</title>
+	<script type="text/javascript">
+		function yearMethod(argument) {
+			var mydate = new Date();
+			console.log("当前日期时间---"+mydate);
+			console.log("当前年份---"+mydate.getFullYear());
+			//设置年份
+			mydate.setFullYear(2020);
+			console.log("设置年份后---"+mydate);
+		}
+		function weekMethod(argument) {
+			var mydate = new Date();
+			var weekday = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+			console.log("今天是："+weekday[mydate.getDay()]);
+		}
+		function putoffMethod(argument) {
+			var mydate = new Date();
+			console.log("当前时间"+mydate);
+			mydate.setTime(mydate.getTime() + 60*60*1000);
+			console.log("推迟一个小时后"+mydate);
+		}
+	</script>
+</head>
+<body>
+	<input type="button" name="button" value="年份" onclick="yearMethod()">
+	<input type="button" name="button" value="星期" onclick="weekMethod()">
+	<input type="button" name="button" value="设置时间" onclick="putoffMethod()">
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#hd{
+				width: 500px;
+				height: 200px;
+				background: mediumaquamarine;
+				margin-top: 123px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				var hd = document.getElementById('hd');
+				if(document.all){
+//					var w = hd.currentStyle.width;
+					var w = hd.currentStyle.marginTop;
+				}else{
+//					var w = getComputedStyle(hd,null).width;
+					var w = getComputedStyle(hd,null).marginTop;
+				}
+				alert(w)
+			}
+		</script>
+	</head>
+	<body>
+		<div id="hd">
+			
+		</div>
+	</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>getElementById_innerHTML</title>
+
+</head>
+<body>
+	<h3 id="con">求知若渴，虚怀若谷。</h3>
+
+	<script type="text/javascript">
+		var object = document.getElementById("con");
+		console.log("原标题："+ object.innerHTML+"<br>");
+		object.innerHTML = "乔布斯";
+		console.log("修改后的标题:" + object.innerHTML + "<br>");
+	</script>
+</body>
+</html>
