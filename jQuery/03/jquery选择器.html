@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../01/jquery-1.11.3.min.js"></script>
+		<script>
+			$(function(){
+				// 选择的是#box里所处在隐藏状态下的p标签
+//				$('#box p:hidden').css({'color':'red','display':'block'})
+				//选择的是#box里所有处在显示状态下的p标签
+//				$('#box p:visible').css({'color':'red'})
+				// 选择的是#box里所有有class属性的p标签
+//				$('#box p[class]').css({'color':'red'})
+//				$('#box p[hd]').css({'color':'blue'})
+				//选择的是#box里所有hd属性值等于houdun的元素
+//				$('#box p[hd = houdun]').css({'color':'red'})
+				//选择的是#box里所有class不等于er的p标签
+//				$('#box p[class!=er]').css({'color':'red'})
+				//选择的是#box里class属性值是以ho开头的p标签
+//				$('#box p[class^=ho]').css({'color':'red'})
+				//选择的是#box里class属性值是以ho开头的p标签
+//				$('#box p[class$=u]').css({'color':'red'})
+				//选择的是#box里class属性值中含有un字符串的p标签
+//				$('#box p[class*=un]').css({'color':'red'})
+				//选择的是#box里有value属性，并且class属性值中含有e，并且hd属性的值是houdun的p标签
+				$('#box p[value][class*=e][hd=houdun]').css({'color':'red'})
+				
+
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<p>求知若渴，虚怀若谷0</p>
+			<p class="one" hd='houdun' value='hhhh'>求知若渴，虚怀若谷1</p>
+			<p class="er">求知若渴，虚怀若谷2</p>
+			<p>求知若渴，虚怀若谷3 <span>我是span</span></p>
+			<p>求知若渴，虚怀若谷4</p>
+			<p style="display: none;">求知若渴，虚怀若谷5</p>
+			<p class="houdunliu">求知若渴，虚怀若谷6 <span>我是span</span></p>
+			<p class="houdunqi">知若渴，虚怀若谷7</p>
+			<p></p>
+			<p></p>
+			<div>
+				<p>求知若渴，虚怀若谷。</p>
+				<p>求知若渴，虚怀若谷。</p>
+				<p>求知若渴，虚怀若谷。</p>
+			</div>
+		</div>
+	</body>
+</html>
