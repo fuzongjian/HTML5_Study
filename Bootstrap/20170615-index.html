@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>浏览器</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="lib/css/bootstrap.min.css">
+	<script src="lib/jquery-3.1.1.min.js"></script>
+	<script src="lib/js/bootstrap.min.js"></script>
+	<style>
+		body{
+			padding-top: 50px;
+		}
+		.carousel{
+			height: 500px;
+			background-color: #000;
+			margin-bottom: 60px;
+		}
+		.carousel .item{
+			height: 500px;
+			background-color: #000;
+		}
+		.carousel img{
+			width: 100%;
+		}
+		.cauousel-caption{
+			margin-bottom: 20px;
+			font-size: 20px;
+			line-height: 1.8;
+		}
+		#summary-container .col-md-4{
+			text-align: center;
+		}
+		hr.divider{
+			margin: 40px 0;
+		}
+	</style>
+</head>
+<body>
+<!-- 导航条 -->
+	<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navgation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navgation</span>
+					<span class="icon-bar">Toggle navgation</span>
+					<span class="icon-bar">Toggle navgation</span>
+					<span class="icon-bar">Toggle navgation</span>
+				</button>
+				<a class="navbar-brand" href="#">现代浏览器博物馆</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">综述</a></li>
+					<li><a href="#">简述</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">特点<span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">Chorme</a></li>
+							<li><a href="#">Firefox</a></li>
+							<li><a href="#">Opera</a></li>
+							<li><a href="#">Safari</a></li>
+							<li><a href="#">IE</a></li>
+						</ul>
+					</li>
+					<li><a href="#">关于</a></li>
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+<!-- 轮播图 -->
+	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+		<!-- 白点 -->
+		<ol class="carousel-indicators">
+			<li data-target="#caousel-example-generic" data-slide-to="0" class="active"></li>
+			<li data-target="#caousel-example-generic" data-slide-to="1"</li>
+			<li data-target="#caousel-example-generic" data-slide-to="2"</li>
+			<li data-target="#caousel-example-generic" data-slide-to="3"</li>
+			<li data-target="#caousel-example-generic" data-slide-to="4"</li>
+
+		</ol>
+		<!-- 图片 -->
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+				<img src="images/ie-big.jpg" alt="1 slide">
+				<div class="carousel-caption">
+					<h2>IE</h2>
+					<P>Internet Explorer，简称IE，是微软公司推出的一款网页浏览器</P>
+					<p><a href="#" class="btn btn-lg btn-primary" target="_blank" role="button">点我下载</a></p>
+				</div>
+			</div>
+			<div class="item">
+				<img src="images/chrome-big.jpg" alt="2 slide">
+				<div class="carousel-caption">
+					<h2>Chrome</h2>
+					<P>Internet Explorer，简称IE，是微软公司推出的一款网页浏览器</P>
+					<p><a href="#" class="btn btn-lg btn-primary" target="_blank" role="button">点我下载</a></p>
+				</div>
+			</div>
+			<div class="item">
+				<img src="images/firefox-big.jpg" alt="1 slide">
+				<div class="carousel-caption">
+					<h2>Firefox</h2>
+					<P>Internet Explorer，简称IE，是微软公司推出的一款网页浏览器</P>
+					<p><a href="#" class="btn btn-lg btn-primary" target="_blank" role="button">点我下载</a></p>
+				</div>
+			</div>
+			<div class="item">
+				<img src="images/safari-big.jpg" alt="1 slide">
+				<div class="carousel-caption">
+					<h2>Safari</h2>
+					<P>Internet Explorer，简称IE，是微软公司推出的一款网页浏览器</P>
+					<p><a href="#" class="btn btn-lg btn-primary" target="_blank" role="button">点我下载</a></p>
+				</div>
+			</div>
+			<div class="item">
+				<img src="images/opera-big.jpg" alt="1 slide">
+				<div class="carousel-caption">
+					<h2>Opera</h2>
+					<P>Internet Explorer，简称IE，是微软公司推出的一款网页浏览器</P>
+					<p><a href="#" class="btn btn-lg btn-primary" target="_blank" role="button">点我下载</a></p>
+				</div>
+			</div>
+		</div>
+		<!-- 上一页下一页按钮 -->
+		<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+			<span class="sr-only">上一页</span>
+		</a>
+		<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+			<span class="sr-only">下一页</span>
+		</a>
+	</div>
+<!--  -->
+	<div class="container" id="summary-container">
+		<div class="row">
+			<div class="col-md-4">
+				<img src="images/chrome-logo-small.jpg" alt="Chorme" class="img-circle">
+				<h2>Chorme</h2>
+				<p>Google Chrome,又称Google浏览器，是一个有Goole（谷歌）公司开发的网页浏览器。</p>
+				<p><a href="#" class="btn btn-default" role="button">点我下载</a></p>
+			</div>
+			<div class="col-md-4">
+				<img src="images/safari-logo-small.jpg" alt="Chorme" class="img-circle">
+				<h2>Safari</h2>
+				<p>Google Chrome,又称Google浏览器，是一个有Goole（谷歌）公司开发的网页浏览器。</p>
+				<p><a href="#" class="btn btn-default" role="button">点我下载</a></p>
+			</div>
+			<div class="col-md-4">
+				<img src="images/firefox-logo-small.jpg" alt="Chorme" class="img-circle">
+				<h2>Firefix</h2>
+				<p>Google Chrome,又称Google浏览器，是一个有Goole（谷歌）公司开发的网页浏览器。</p>
+				<p><a href="#" class="btn btn-default" role="button">点我下载</a></p>
+			</div>
+		</div>
+		<hr class="divider">
+
+		<ul class="nav nav-tabs" role="tablist">
+			<li class="active"><a href="#Chrome" role="tab" data-toggle="tab">Chrome</a></li>
+			<li><a href="#Firefix" role="tab" data-toggle="tab">Firefix</a></li>
+			<li><a href="#Opera" role="tab" data-toggle="tab">OperaOpera</a></li>
+			<li><a href="#Safari" role="tab" data-toggle="tab">Safari</a></li>
+		</ul>
+
+		<div class="tab-content">
+			<div class="tab-pane active" id="Chrome">
+				<div class="col-md-7">
+					<h2 class="feature-heading">Google Chorme</h2>
+					<p class="lead">
+						home那年那个酷热的夏天，马路旁站着一个身穿白色连衣裙的女孩，精致的花边衬出白皙的双腿，修长挺拔，玲珑的曲线完完全全的勾勒了出来，女孩一脸无助，这一幕出现在他眼里，他便忍不住想要上去搭讪，可是却没有什么借口，当看到女孩身旁的行李时，他便直直的朝女孩走去。
+					</p>
+				</div>
+				<div class="col-md-5">
+					<img class="feature-image img-responsive" src="images/chrome-logo.jpg" alt="Chrome"></img>
+				</div>
+				
+			</div>
+			<div class="tab-pane" id="Firefix">
+				
+				<div class="col-md-5">
+					<img class="feature-image img-responsive" src="images/firefox-logo.jpg" alt="Firefix"></img>
+				</div>
+				<div class="col-md-7">
+					<h2 class="feature-heading">Firefix</h2>
+					<p class="lead">
+						home那年那个酷热的夏天，马路旁站着一个身穿白色连衣裙的女孩，精致的花边衬出白皙的双腿，修长挺拔，玲珑的曲线完完全全的勾勒了出来，女孩一脸无助，这一幕出现在他眼里，他便忍不住想要上去搭讪，可是却没有什么借口，当看到女孩身旁的行李时，他便直直的朝女孩走去。
+					</p>
+				</div>
+				
+			</div>
+			<div class="tab-pane" id="Opera">
+				<div class="col-md-7">
+					<h2 class="feature-heading">Opera</h2>
+					<p class="lead">
+						home那年那个酷热的夏天，马路旁站着一个身穿白色连衣裙的女孩，精致的花边衬出白皙的双腿，修长挺拔，玲珑的曲线完完全全的勾勒了出来，女孩一脸无助，这一幕出现在他眼里，他便忍不住想要上去搭讪，可是却没有什么借口，当看到女孩身旁的行李时，他便直直的朝女孩走去。
+					</p>
+				</div>
+				<div class="col-md-5">
+					<img class="feature-image img-responsive" src="images/opera-logo.jpg" alt="Chrome"></img>
+				</div>
+			</div>
+			<div class="tab-pane" id="Safari">
+				<div class="col-md-5">
+					<img class="feature-image img-responsive" src="images/safari-logo.jpg" alt="Safari"></img>
+				</div>
+				<div class="col-md-7">
+					<h2 class="feature-heading">Safari</h2>
+					<p class="lead">
+						home那年那个酷热的夏天，马路旁站着一个身穿白色连衣裙的女孩，精致的花边衬出白皙的双腿，修长挺拔，玲珑的曲线完完全全的勾勒了出来，女孩一脸无助，这一幕出现在他眼里，他便忍不住想要上去搭讪，可是却没有什么借口，当看到女孩身旁的行李时，他便直直的朝女孩走去。
+					</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+<!--  -->
+
+</body>
+</html>
