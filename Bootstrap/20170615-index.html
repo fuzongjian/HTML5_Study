@@ -10,6 +10,7 @@
 	<style>
 		body{
 			padding-top: 50px;
+			padding-bottom: 50px;
 		}
 		.carousel{
 			height: 500px;
@@ -34,6 +35,16 @@
 		hr.divider{
 			margin: 40px 0;
 		}
+		.feature-heading{
+			font-size: 50px;
+			color: #2a6496;
+			margin-top: 120px;
+		}
+		.feature-heading .text-muted{
+			font-size: 20px;
+			color: #999;
+			margin-left: 30px;
+		}
 	</style>
 </head>
 <body>
@@ -41,7 +52,7 @@
 	<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navgation">
 		<div class="container">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#demo-navbar">
 					<span class="sr-only">Toggle navgation</span>
 					<span class="icon-bar">Toggle navgation</span>
 					<span class="icon-bar">Toggle navgation</span>
@@ -50,20 +61,19 @@
 				<a class="navbar-brand" href="#">现代浏览器博物馆</a>
 			</div>
 
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<div class="collapse navbar-collapse" id="demo-navbar">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">综述</a></li>
 					<li><a href="#">简述</a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">特点<span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">Chorme</a></li>
-							<li><a href="#">Firefox</a></li>
-							<li><a href="#">Opera</a></li>
-							<li><a href="#">Safari</a></li>
-							<li><a href="#">IE</a></li>
+							<li><a href="#tab-chorme">Chorme</a></li>
+							<li><a href="#tab-firefox">Firefox</a></li>
+							<li><a href="#tab-opera">Opera</a></li>
+							<li><a href="#tab-safari">Safari</a></li>
 						</ul>
 					</li>
-					<li><a href="#">关于</a></li>
+					<li><a href="#" data-toggle="modal" data-target="#about">关于</a></li>
 
 				</ul>
 			</div>
@@ -157,65 +167,130 @@
 		</div>
 		<hr class="divider">
 
-		<ul class="nav nav-tabs" role="tablist">
-			<li class="active"><a href="#Chrome" role="tab" data-toggle="tab">Chrome</a></li>
-			<li><a href="#Firefix" role="tab" data-toggle="tab">Firefix</a></li>
-			<li><a href="#Opera" role="tab" data-toggle="tab">OperaOpera</a></li>
-			<li><a href="#Safari" role="tab" data-toggle="tab">Safari</a></li>
+		<ul class="nav nav-tabs" role="tablist" id="tab-list">
+			<li class="active"><a href="#tab-chrome" role="tab" data-toggle="tab">Chrome</a></li>
+			<li><a href="#tab-firefox" role="tab" data-toggle="tab">Firefix</a></li>
+			<li><a href="#tab-opera" role="tab" data-toggle="tab">Opera</a></li>
+			<li><a href="#tab-safari" role="tab" data-toggle="tab">Safari</a></li>
 		</ul>
 
 		<div class="tab-content">
-			<div class="tab-pane active" id="Chrome">
-				<div class="col-md-7">
-					<h2 class="feature-heading">Google Chorme</h2>
-					<p class="lead">
-						home那年那个酷热的夏天，马路旁站着一个身穿白色连衣裙的女孩，精致的花边衬出白皙的双腿，修长挺拔，玲珑的曲线完完全全的勾勒了出来，女孩一脸无助，这一幕出现在他眼里，他便忍不住想要上去搭讪，可是却没有什么借口，当看到女孩身旁的行李时，他便直直的朝女孩走去。
-					</p>
-				</div>
-				<div class="col-md-5">
-					<img class="feature-image img-responsive" src="images/chrome-logo.jpg" alt="Chrome"></img>
-				</div>
-				
-			</div>
-			<div class="tab-pane" id="Firefix">
-				
-				<div class="col-md-5">
-					<img class="feature-image img-responsive" src="images/firefox-logo.jpg" alt="Firefix"></img>
-				</div>
-				<div class="col-md-7">
-					<h2 class="feature-heading">Firefix</h2>
-					<p class="lead">
-						home那年那个酷热的夏天，马路旁站着一个身穿白色连衣裙的女孩，精致的花边衬出白皙的双腿，修长挺拔，玲珑的曲线完完全全的勾勒了出来，女孩一脸无助，这一幕出现在他眼里，他便忍不住想要上去搭讪，可是却没有什么借口，当看到女孩身旁的行李时，他便直直的朝女孩走去。
-					</p>
-				</div>
-				
-			</div>
-			<div class="tab-pane" id="Opera">
-				<div class="col-md-7">
-					<h2 class="feature-heading">Opera</h2>
-					<p class="lead">
-						home那年那个酷热的夏天，马路旁站着一个身穿白色连衣裙的女孩，精致的花边衬出白皙的双腿，修长挺拔，玲珑的曲线完完全全的勾勒了出来，女孩一脸无助，这一幕出现在他眼里，他便忍不住想要上去搭讪，可是却没有什么借口，当看到女孩身旁的行李时，他便直直的朝女孩走去。
-					</p>
-				</div>
-				<div class="col-md-5">
-					<img class="feature-image img-responsive" src="images/opera-logo.jpg" alt="Chrome"></img>
+
+			<div class="tab-pane active" id="tab-chrome">
+				<div class="row feature">
+					<div class="col-md-7">
+						<h2 class="feature-heading">Google Chorme<span class="text-muted">付宗建</span></h2>
+						<p class="lead">
+							home那年那个酷热的夏天，马路旁站着一个身穿白色连衣裙的女孩，精致的花边衬出白皙的双腿，修长挺拔，玲珑的曲线完完全全的勾勒了出来，女孩一脸无助，这一幕出现在他眼里，他便忍不住想要上去搭讪，可是却没有什么借口，当看到女孩身旁的行李时，他便直直的朝女孩走去。
+						</p>
+					</div>
+					<div class="col-md-5">
+						<img class="feature-image img-responsive" src="images/chrome-logo.jpg" alt="Chrome"></img>
+					</div>
 				</div>
 			</div>
-			<div class="tab-pane" id="Safari">
-				<div class="col-md-5">
-					<img class="feature-image img-responsive" src="images/safari-logo.jpg" alt="Safari"></img>
+
+			<div class="tab-pane" id="tab-firefox">
+				<div class="row feature">
+					<div class="col-md-5">
+						<img class="feature-image img-responsive" src="images/firefox-logo.jpg" alt="Firefix"></img>
+					</div>
+					<div class="col-md-7">
+						<h2 class="feature-heading">Firefix<span class="text-muted">付宗建</span></h2>
+						<p class="lead">
+							home那年那个酷热的夏天，马路旁站着一个身穿白色连衣裙的女孩，精致的花边衬出白皙的双腿，修长挺拔，玲珑的曲线完完全全的勾勒了出来，女孩一脸无助，这一幕出现在他眼里，他便忍不住想要上去搭讪，可是却没有什么借口，当看到女孩身旁的行李时，他便直直的朝女孩走去。
+						</p>
+					</div>
 				</div>
-				<div class="col-md-7">
-					<h2 class="feature-heading">Safari</h2>
-					<p class="lead">
-						home那年那个酷热的夏天，马路旁站着一个身穿白色连衣裙的女孩，精致的花边衬出白皙的双腿，修长挺拔，玲珑的曲线完完全全的勾勒了出来，女孩一脸无助，这一幕出现在他眼里，他便忍不住想要上去搭讪，可是却没有什么借口，当看到女孩身旁的行李时，他便直直的朝女孩走去。
-					</p>
-				</div>
+			</div>
+
+			<div class="tab-pane" id="tab-opera">
+				<div class="row feature">
+					<div class="col-md-7">
+						<h2 class="feature-heading">Opera<span class="text-muted">付宗建</span></h2>
+						<p class="lead">
+							home那年那个酷热的夏天，马路旁站着一个身穿白色连衣裙的女孩，精致的花边衬出白皙的双腿，修长挺拔，玲珑的曲线完完全全的勾勒了出来，女孩一脸无助，这一幕出现在他眼里，他便忍不住想要上去搭讪，可是却没有什么借口，当看到女孩身旁的行李时，他便直直的朝女孩走去。
+						</p>
+					</div>
+					<div class="col-md-5">
+						<img class="feature-image img-responsive" src="images/opera-logo.jpg" alt="Chrome"></img>
+					</div>
+				</div>	
+			</div>
+
+			<div class="tab-pane" id="tab-safari">
+				<div class="row feature">
+					<div class="col-md-5">
+						<img class="feature-image img-responsive" src="images/safari-logo.jpg" alt="Safari"></img>
+					</div>
+					<div class="col-md-7">
+						<h2 class="feature-heading">Safari<span class="text-muted">付宗建</span></h2>
+						<p class="lead">
+							home那年那个酷热的夏天，马路旁站着一个身穿白色连衣裙的女孩，精致的花边衬出白皙的双腿，修长挺拔，玲珑的曲线完完全全的勾勒了出来，女孩一脸无助，这一幕出现在他眼里，他便忍不住想要上去搭讪，可是却没有什么借口，当看到女孩身旁的行李时，他便直直的朝女孩走去。
+						</p>
+					</div>
+				</div>	
 			</div>
 		</div>
 
+		<!--  -->
+		<hr class="divider"></hr>
+		<footer>
+			<p class="pull-right"><a href="#">回到顶部</a></p>
+			<p>@ 2017悠然阿尔法</p>
+		</footer>
 	</div>
-<!--  -->
+<!-- 弹出框 -->
+<div class="modal fade" id="about">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<!-- <button class="colse" type="button" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button> -->
+				<button type="button" class="close" data-dismiss="modal"><span>&times;</span><span class="sr-only">关闭弹窗</span></button>
+				<h4 class="modal-title">关于</h4>
+			</div>
+			<div class="modal-body">
+				<p>
+					home那年那个酷热的夏天，马路旁站着一个身穿白色连衣裙的女孩，精致的花边衬出白皙的双腿，修长挺拔，玲珑的曲线完完全全的勾勒了出来，女孩一脸无助，这一幕出现在他眼里，他便忍不住想要上去搭讪，可是却没有什么借口，当看到女孩身旁的行李时，他便直直的朝女孩走去。
+				</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-default" type="button" data-dismiss="modal">了解了</button>
+				<!-- <button class="btn btn-primary" type="button">Save Changes</button> -->
+			</div>
+		</div>
+	</div>
+</div>
 
+
+
+
+<div class="modal fade" id="myModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span>&times;</span><span class="sr-only">关闭弹窗</span></button>
+				<h4 class="modal-title" id="myModalLabel">标题</h4>
+			</div>
+			<div class="modal-body">
+				慕课网
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-default" type="button" datadismiss="modal">关闭</button>
+				<button class="btn btn-primary" type="button">保存</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(document).ready(function () {
+		$("#demo-navbar .dropdown-menu a").click(function () {
+			var href = $(this).attr("href");
+			console.log(href);
+			$("#tab-list a[href = '"+href+"']").tab("show");
+		})
+	})
+</script>
 </body>
 </html>
