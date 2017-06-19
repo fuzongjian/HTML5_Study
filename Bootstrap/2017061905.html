@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>表单</title>
+	<link rel="stylesheet" href="lib/css/bootstrap.min.css">
+	<script src="lib/js/bootstrap.min.js"></script>
+	<script src="lib/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+	<h3>基本实例</h3>
+	<form>
+		<div class="form-group">
+			<label for="exampleInpuEmail">Email address</label>
+			<input class="form-control" type="email" id="exampleInputEmail" placeholder="Email"></input>
+		</div>
+		<div class="form-group">
+			<label for="exampleInputPassword">Password</label>
+			<input class="form-control" type="password" id="exampleInputPassword1" placeholder="Password"></input>
+		</div>
+		<div class="form-group">
+			<label for="exampleInputFile">File input</label>
+			<input type="file" id="exampleInputFile">
+			<p class="help-block">Example block-level help text here</p>
+		</div>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox">Check me out
+			</label>
+			<button class="btn btn-default" type="submit">Submit</button>
+		</div>
+	</form>
+	<h3>内联表单</h3>
+	<form class="form-inline">
+		<div class="form-group">
+			<label for="exampleInpuEmail">Name</label>
+			<input class="form-control" type="email" id="exampleInputEmail" placeholder="fuzongjian"></input>
+		</div>
+		<div class="form-group">
+			<label for="exampleInputPassword">Email</label>
+			<input class="form-control" type="password" id="exampleInputPassword1" placeholder="fuzongjian@qq.com"></input>
+		</div>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox"> Remember me
+			</label>
+		</div>
+		<button class="btn btn-primary" type="submit">Send invitation</button>
+
+
+		<div class="form-group">
+			<label class="sr-only" for="exampleInputAmount">Amount(in dallars)</label>
+			<div class="input-group">
+				<div class="input-group-addon">$</div>
+				<input class="form-control" type="text" id="exampleInputAmount" placeholder="Amount"></input>
+				<div class="input-group-addon">.00</div>
+			</div>
+		</div>
+	</form>
+	<h3>水平排列的表单</h3>
+	<form class="form-horizontal">
+		<div class="form-group">
+			<label for="exampleInpuEmail" class="col-sm-2 control-label">Name</label>
+			<div class="col-sm-5">
+				<input class="form-control" type="email" id="exampleInputEmail" placeholder="fuzongjian"></input>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="exampleInputPassword" class="col-sm-2 control-label">Email</label>
+			<div class="col-sm-5">				
+				<input class="form-control" type="password" id="exampleInputPassword1" placeholder="fuzongjian@qq.com"></input>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox"> Remember me
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button class="btn btn-primary" type="submit">Send invitation</button>
+			</div>
+		</div>
+
+
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-8">
+				<label class="sr-only" for="exampleInputAmount">Amount(in dallars)</label>
+				<div class="input-group">
+					<div class="input-group-addon">$</div>
+					<input class="form-control" type="text" id="exampleInputAmount" placeholder="Amount"></input>
+					<div class="input-group-addon">.00</div>
+				</div>
+			</div>
+		</div>
+	</form>
+	<h3>被支持的控件</h3>
+	<h4>输入框</h4>
+	<input class="form-control" type="text" placeholder="Text input"></input>
+
+	<h4>文本域</h4>
+	<textarea class="form-control" rows="3" placeholder="textarea"></textarea>
+	<h4>多选和单选框</h4>
+	<h5>默认外观（堆叠在一起）</h5>
+	<div class="checkbox">
+		<label>
+			<input type="checkbox" name="">
+			option one is this and that&mdash;be sure to include why it's great
+		</label>
+	</div>
+	<div class="checkbox disabled">
+		<label>
+			<input type="checkbox" name="" disabled="true">
+			option one is this and that&mdash;be sure to include why it's great
+		</label>
+	</div>
+	<div class="radio">
+		<label>
+			<input type="radio" name="optionsTadios" id="optionsTadios1" value="option1" checked>
+			Option one is this and that&mdash;be sure to include why it's great
+		</label>
+	</div>
+	<div class="radio">
+		<label>
+			<input type="radio" name="optionsTadios" id="optionsTadios1" value="option1">
+			Option one is this and that&mdash;be sure to include why it's great
+		</label>
+	</div>
+	<div class="radio">
+		<label>
+			<input type="radio" name="optionsTadios" id="optionsTadios1" value="option1">
+			Option one is this and that&mdash;be sure to include why it's great
+		</label>
+	</div>
+	<h5>内联单选和多选框</h5>
+	<label class="checkbox-inline">
+  	<input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+	</label>
+	<label class="checkbox-inline">
+	  <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+	</label>
+	<label class="checkbox-inline">
+	  <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+	</label>
+
+	<label class="radio-inline">
+	  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+	</label>
+	<label class="radio-inline">
+	  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+	</label>
+	<label class="radio-inline">
+	  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+	</label>
+	<h5>不带label文本的Checkbox和radio</h5>
+	<div class="checkbox">
+	  <label>
+	    <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+	  </label>
+	</div>
+	<div class="radio">
+	  <label>
+	    <input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+	  </label>
+	</div>
+	<h4>下拉列表</h4>
+	<select class="form-control">
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>
+	</select>
+	<select multiple class="form-control">
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>
+	</select>
+	<h4>静态控件</h4>
+	<form class="form-horizontal">
+		<div class="form-group">	
+			<label class="col-sm-2 control-label">Eamil</label>
+			<div class="col-sm-10">
+				<p class="form-control-static">fuzongjian@qq.com</p>
+			</div>
+		</div>
+
+		<div class="form-group">	
+			<label class="col-sm-2 control-label"  for="inputPassword">Password</label>
+			<div class="col-sm-10">
+			<input type="password" name="" class="form-control" id="inputPassword" placeholder="Password">
+		</div>
+		</div>
+	</form>
+	<h4>禁用状态</h4>
+	<form>
+	  <fieldset disabled>
+	    <div class="form-group">
+	      <label for="disabledTextInput">Disabled input</label>
+	      <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+	    </div>
+	    <div class="form-group">
+	      <label for="disabledSelect">Disabled select menu</label>
+	      <select id="disabledSelect" class="form-control">
+	        <option>Disabled select</option>
+	      </select>
+	    </div>
+	    <div class="checkbox">
+	      <label>
+	        <input type="checkbox"> Can't check this
+	      </label>
+	    </div>
+	    <button type="submit" class="btn btn-primary">Submit</button>
+	  </fieldset>
+	</form>
+	<h4>只读状态</h4>
+	<input class="form-control" type="text" placeholder="Readonly input here…" readonly>
+	<h4>校验状态</h4>
+	<div class="form-group has-success">
+		<label class="control-label" for="inputSuccess1">Input with success</label>
+  		<input type="text" class="form-control" id="inputSuccess1" aria-describedby="helpBlock2">
+  		<span id="helpBlock2" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+	</div>
+	<div class="form-group has-warning">
+	  <label class="control-label" for="inputWarning1">Input with warning</label>
+	  <input type="text" class="form-control" id="inputWarning1">
+	</div>
+	<div class="form-group has-error">
+	  <label class="control-label" for="inputError1">Input with error</label>
+	  <input type="text" class="form-control" id="inputError1">
+	</div>
+	<div class="has-success">
+	  <div class="checkbox">
+	    <label>
+	      <input type="checkbox" id="checkboxSuccess" value="option1">
+	      Checkbox with success
+	    </label>
+	  </div>
+	</div>
+	<div class="has-warning">
+	  <div class="checkbox">
+	    <label>
+	      <input type="checkbox" id="checkboxWarning" value="option1">
+	      Checkbox with warning
+	    </label>
+	  </div>
+	</div>
+	<div class="has-error">
+	  <div class="checkbox">
+	    <label>
+	      <input type="checkbox" id="checkboxError" value="option1">
+	      Checkbox with error
+	    </label>
+	 	</div>
+	</div>
+</body>
+</html>
